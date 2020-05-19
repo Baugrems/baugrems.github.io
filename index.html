@@ -6,11 +6,11 @@
                 background-color: pink;
                 color: green;
             }
-            
+
             #myButton {
                 background-color: red;
             }
-            
+
             #myButton:hover {
                 background-color: blue;
             }
@@ -22,20 +22,20 @@
        <nav>
            navigation here
        </nav>
-        <p id="demo">This is my paragraph</p>
-        
+        <p id="demo">This is my new paragraph</p>
+
         <button id="myButton"><p id="buttonTxt">Click me</p></button>
-        
+
     </body>
     <script>
         var date = new Date();
-        
+
         var hour = date.getHours();
-        
+
         var mins = date.getMinutes();
-        
+
         var demo = document.getElementById("demo");
-        
+
         if (hour < 12) {
             demo.innerHTML = hour + ":" + mins + "am";
         } else if (hour < 13) {
@@ -43,20 +43,20 @@
         } else {
             demo.innerHTML = (hour - 12) + ":" + mins + "pm";
         }
-        
+
         demo.style.backgroundColor = "blue";
         demo.style.color = "yellow";
         demo.style.width = "10%";
         demo.style.textAlign = "center";
         demo.style.fontWeight = "900";
-        
+
         var button = document.getElementById("myButton");
         button.addEventListener("click", changeButton);
-        
+
         function changeButton() {
             button.style.backgroundColor = "green";
             document.getElementById("buttonTxt").innerHTML = "You did it!";
         }
-        
+
     </script>
 </html>
